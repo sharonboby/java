@@ -1,28 +1,25 @@
-package module1;
+package tutorial4;
 import java.util.Scanner;
-class Circle
-{
+class Circle {
     double radius;
-    Circle(double r)
-    {
-        radius = r;
+    Circle(double radius) {
+        this.radius = radius;
     }
-    void display()
-    {
-        double area = 3.14 * radius * radius;
-        double circumference = 2 * 3.14 * radius;
-        System.out.println("Area = " + area);
-        System.out.println("Circumference = " + circumference);
+    void display() {
+        double area = Math.PI * radius * radius;
+        double circumference = 2 * Math.PI * radius;
+        System.out.println("Radius: " + radius);
+        System.out.println("Area: " + area);
+        System.out.println("Circumference: " + circumference);
     }
 }
-public class CircleDemo
-{
-    public static void main(String args[])
-    {
+public class CircleDemo {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Radius: ");
-        double r = sc.nextDouble();
-        Circle c = new Circle(r);
+        System.out.print("Enter radius: ");
+        double radius = sc.nextDouble();
+        Circle c = new Circle(radius);
         c.display();
+        sc.close();
     }
 }
